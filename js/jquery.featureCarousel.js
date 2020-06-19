@@ -639,7 +639,7 @@
     });
 
     // Did someone click one of the individual trackers?
-    $(".tracker-individual-blip",  pluginData.containerIDTag).on("click",function () {
+    $(pluginData.containerIDTag, document).on("click", ".tracker-individual-blip", function () {
       // grab the position # that was clicked
       var goTo = $(this).attr("id").substring(8);
       // find out where that feature # actually is in the carousel right now
